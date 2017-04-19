@@ -12,9 +12,6 @@ app.use(bodyParser.json())
 
 app.use(express.static(path.resolve(__dirname,'..','public')))
 
-// const sql = require('mssql');
-// const db = sql.connect("mssql://youcb:DJit9379@youcaibao.sqlserver.rds.aliyuncs.com:3433/youcb_prd")
-
 const mssql = require('./db')
 const { db,sql } = mssql
 
