@@ -1,0 +1,110 @@
+.App {
+  height: 700px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Sidebar {
+  padding-right: 50px;
+}
+
+.Sidebar li {
+  width: 185px;
+  height: 50px;
+  font-size: 20px;
+  background: grey;
+  border-bottom: 1px solid white;
+  display: flex;
+}
+
+.Sidebar__Link {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Sidebar__Link.active, .Sidebar__Link:hover {
+  background: #ffc519;
+}
+
+.Sidebar .Sidebar__last {
+  height: 240px;
+  background-image: url('../image/news-call.png');
+}
+
+.Siderbar footer {
+
+}
+
+.NoMatch {
+  width: 960px;
+  height: 500px;
+}
+
+.News {
+  display: flex;
+}
+
+.News__ul {
+  height: 506px;
+  overflow: auto;
+}
+
+.News__List {
+  width: 480px;
+  height: 100px;
+  display: flex;
+  border-top: 1px solid grey;
+}
+
+.News__List:last-child {
+  border-bottom: 1px solid grey;
+}
+
+.News__Date {
+}
+
+.News__Content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px 0 28px 10px;
+  font-size: 14px;
+}
+
+.News__Content header {
+  font-size: 18px;
+}
+
+.News__Photos {
+  width: 430px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 500px;
+  padding-left: 50px;
+}
+
+.News__Photos .bigPic {
+  height: 260px;
+  width: 430px;
+}
+
+.News__Photos .smallPic {
+  height: 218px;
+  width: 207px;
+  align-self: flex-end;
+}
+
+.Videos {
+  width: 960px;
+  height: 500px;
+}
+
+.Videos__Banner {
+  width: 100%;
+  height: 260px;
+}
