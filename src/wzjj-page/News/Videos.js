@@ -8,7 +8,6 @@ class Videos extends React.Component {
       <img class='Videos__Banner' src={banner} alt=""/>
       <video src="">video1</video>
       <video src="">video2</video>
-      <div>this is video</div>
     </div>
   }
 }

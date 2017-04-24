@@ -1,0 +1,385 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #2c2c2c;
+}
+
+html,body, #root,.App {
+  height: 100%;
+}
+
+ul,li {
+  list-style: none;
+}
+
+button {
+  width: 100px;
+  height: 5vh;
+  max-height: 30px;
+  background-color: #fe6914;
+  /*rgb(133, 93, 205);*/
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  letter-spacing: 3px;
+  border-style: none;
+  border-radius: 2px;
+  outline: none;
+}
+
+button:hover {
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2),0 4px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+input {
+  border-style: none;
+  border: 1px solid grey;
+  width: 200px;
+  height: 5vh;
+  max-height: 30px;
+  border-radius: 5px;
+  /*border-bottom: 1px solid #dcdcdc;*/
+  font-size: 20px;
+  text-indent: 5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.Login {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 20vh;
+  padding-left: 18vw;
+  background: #fe6914;
+}
+
+#login-logo {
+  display: block;
+  height: 80px;
+  padding: 20px;
+}
+
+#login-pic {
+  display: block;
+  width: 40vw;
+  height: 40vh;
+}
+
+.Login section {
+  display: flex;
+}
+
+.Login main {
+  width: 18vw;
+  padding: 30px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Login header {
+  font-size: 1.8rem;
+  color: grey;
+  padding: 1rem 0;
+}
+
+.Login input {
+  width: 90%;
+  margin: 10px 0;
+}
+
+.Login button {
+  width: 90%;
+  height: 40px;
+  max-height: 40px;
+  margin-top: 30px;
+  letter-spacing: 15px;
+  font-size: 20px;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  align-items: center;
+  width: calc(100% - 80px);
+  background: #3b3b3b;
+  height: 10%;
+  max-height: 100px;
+  color: white;
+}
+
+.Header img {
+  height: 60px;
+}
+
+.Body {
+  display: flex;
+  height: 90%;
+}
+
+.Sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  list-style-type: none;
+  width: 130px;
+  border-right: 1px solid #dcdcdc;
+}
+
+.Sidebar li {
+  display: flex;
+}
+
+.Sidebar a {
+  text-align: center;
+  padding: 3vh 0;
+  width: 100%;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.Sidebar a.active {
+  color: #fe6914;
+}
+
+.Sidebar a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.MainContent {
+  padding: 8px;
+  width: calc(100% - 146px);
+  background-color: rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.Toolbar {
+  display: flex;
+  justify-content: space-between;
+  height: 7vh;
+  max-height: 80px;
+  padding: 0 30px;
+  align-items: center;
+  background-color: white;
+}
+
+.Toolbar__addButton {
+  width: 40px;
+  font-size: 1.5rem;
+}
+
+.Table {
+  margin-top: 7px;
+  padding: 0 10px;
+  background-color: white;
+}
+
+.Table__nothing {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.NewsEditor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid grey;
+}
+
+.NewsEditor input {
+  text-indent: 8px;
+  border-color: white;
+}
+
+.NewsEditor input:hover, .NewsEditor input:focus {
+  border-color: grey;
+}
+
+.NewsEditor header {
+  width: 75%;
+  display: flex;
+  margin: 10px 0;
+}
+
+.titleInput {
+  flex-grow: 1;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.longInput {
+  width: 75%;
+  margin-bottom: 10px;
+}
+
+.NewsEditor__buttons {
+  width: 75%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.NewsEditor__buttons .deleteButton {
+  background: #F24A4A;
+  margin-right: 10px;
+}
+
+.Banner {
+  height: 40px;
+  background: lightgreen;
+  text-indent: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.Banner--failure {
+  background: #FF8784;
+}
+
+.Alert {
+  height: 40px;
+  background: lightblue;
+  text-indent: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.Alert button {
+  height: 25px;
+  background: white;
+  color:#F24A4A;
+  margin-left: 10px;
+}
+
+.SignupTable__Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+  font-size: 1.1rem;
+}
+
+.SignupTable__Header li {
+  flex: 150px;
+  text-align: center;
+}
+
+.SignupTable__Header li:first-child {
+  flex: 0 0 50px;
+  height: 40px;
+}
+
+.SignupTable__Header li:last-child {
+  flex: 0 2 400px;
+}
+
+.SignupTable__scrollWrapper {
+  overflow-y:auto;
+  height: calc(90vh - 132px);
+}
+
+.SignupTable__scrollWrapper table {
+  width: 100%;
+}
+
+.SignupTable__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 38px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  font-size: 1rem;
+}
+
+.SignupTable__row td {
+  flex: 150px;
+  text-align: center;
+}
+
+.SignupTable__row td:first-child {
+  flex: 0 0 50px;
+  height: 38px;
+  background-image: url('../../static/check.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+}
+
+.SignupTable__row td:first-child.completed {
+  background-image: url('../../static/check-hover.png');
+}
+
+.SignupTable__row td:last-child {
+  flex: 0 2 400px;
+}
+
+.memoInput {
+  width: 90%;
+  font-size: 1rem;
+  text-indent: 8px;
+  border-color: white;
+}
+
+.memoInput:hover, .memoInput:focus {
+  border-color: grey;
+}
+
+.CompletedFilter {
+  position: relative;
+  width: 9vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.CompletedFilter header {
+  text-indent: 1vw;
+  height: 2.6vh;
+  border-bottom: 1px dotted grey;
+}
+
+.CompletedFilter header:hover {
+  color: #55CFDE;
+}
+
+.CompletedFilter header img {
+  position: absolute;
+  right: 0.5vw;
+  top: 1vh;
+  height: 1.1vh;
+}
+
+.CompletedFilter section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  top: 5vh;
+  width: 7vw;
+  height: 10vh;
+  background: white;
+  border: 1px solid grey;
+  box-shadow: 0 2px 2px grey;
+}
+
+.CompletedFilter section div {
+  padding: 0 1vw;
+}
+
+.CompletedFilter section div:hover {
+
+  background: rgba(0, 0, 0, 0.1);
+}

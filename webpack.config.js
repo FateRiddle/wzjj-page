@@ -7,9 +7,9 @@ module.exports = (env={}) => ({  // env={} so if not specified, env.production =
   context: path.resolve(__dirname,'src'),
   // context: __dirname + "/app",
   entry: {
-    index: "./index.js",
-    news: "./News/index.js",
-    // page2: "./page2.js",
+    page_index: "./wzjj-page/index.js",
+    page_news: "./wzjj-page/News/index.js",
+    houtai_index: "./wzjj-houtai/index.js",
   },
   output: {
     path: path.resolve(__dirname,"public/dist"),
@@ -39,7 +39,7 @@ module.exports = (env={}) => ({  // env={} so if not specified, env.production =
           {
             loader: "file-loader",
             options: {
-              outputPath: "assets/",
+              outputPath: "/assets/",  // 似乎是直接拼接上去的 两个"/"都要写 
               // publicPath: "assets/",   //what is this for? you don't need it in html
               name: '[name]--[hash:base64:5].[ext]'
             }
@@ -68,7 +68,7 @@ module.exports = (env={}) => ({  // env={} so if not specified, env.production =
     contentBase: path.resolve(__dirname,"public"),
     proxy: {
       '/api':{
-        target: 'http://localhost:3001',
+        target: 'http://localhost:9090',
         secure:false
       }
     }

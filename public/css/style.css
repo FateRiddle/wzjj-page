@@ -27,28 +27,6 @@
 #closebt td > span{padding-right:30px;cursor:pointer;font-weight:normal;font-size:14px;}
 #closebt tr:last-child td{border:none}
 
-/*报名提示*/
-.Alert {
-  position: fixed;
-  z-index: 99999;
-  top: 30vh;
-  left: 40vw;
-  height: 30vh;
-  width: 15vw;
-  min-width: 250px;
-  background: black;
-  color: white;
-  opacity: 0.7;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.Alert__OkButton {
-
-}
-
 /*---solid--焦点图--*/
 .the-head{overflow: hidden;}
 .swiper-container {

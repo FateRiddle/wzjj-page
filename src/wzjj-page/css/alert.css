@@ -1,0 +1,30 @@
+/*报名提示*/
+.Alert {
+  position: fixed;
+  z-index: 99999;
+  top: 30vh;
+  left: 40vw;
+  height: 20vh;
+  width: 17vw;
+  min-width: 250px;
+  background: black;
+  color: #ffc519;
+  font-size: 1.1rem;
+  opacity: 0.7;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5vh;
+  align-items: center;
+}
+
+.Alert main {
+  padding-bottom: 4vh;
+}
+
+.Alert__OkButton {
+  height: 14vh;
+  width: 10vw;
+  min-width: 100px;
+  max-width: 150px;
+  background: url('../image/check.png') no-repeat;
+}
