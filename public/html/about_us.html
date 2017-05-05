@@ -2,6 +2,8 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="东箭完整家居">
     <meta content="东箭完整家居" name="keywords">
     <title>东箭完整家居--关于我们</title>
     <link rel="stylesheet" href="../css/reset.css">
@@ -20,7 +22,7 @@
                 <!-------city----城市选择--------->
                 <div class="city">
                     <div class="loginfr">
-                        <button type="button" id="ClickMe">杭州<img src="../images/icon-02.png"></button>
+                        <button type="button" id="ClickMe"><span>杭州</span><img src="../images/icon-02.png"></button>
                     </div>
                     <div id="goodcover"></div>
                     <div id="code">
@@ -38,7 +40,7 @@
                                 </tr>
                                 <tr>
                                     <td>华南</td>
-                                    <td><span> 广州、佛山</span><span>深圳、惠州、东莞</span></td>
+                                    <td><span> 广州</span><span>佛山</span><span>深圳</span><span>惠州</span><span>东莞</span></td>
                                 </tr>
                                 <tr>
                                     <td>华中</td>
@@ -64,7 +66,7 @@
                     </div>
                 </div><!--city---over-->
                 <a href="../html/The_login.html" class="login_a">登录</a>
-                <a href="#" class="login_a">注册</a>
+                <a href="../html/register.html" class="login_a">注册</a>
             </div>
         </div>
     </div>
@@ -72,7 +74,7 @@
     <div class="the-head">
         <div class="nav">
             <div class="content-one">
-                <div class="nav-left"><img src="../images/icon-03.png"></div>
+                <div class="nav-left"><a href="../html/index.html"><img src="../images/icon-03.png"></a></div>
                 <!--menu--菜单-->
                 <div class="nav-rig">
                     <ul class="menu1">
@@ -80,18 +82,22 @@
                         <li class="list1">
                             <a href="../html/product_suit.html">产品套装</a>
                             <ul class="menu2 index-chan">
-                                <li class="list2"><a href="../html/product.html">产品详情页</a></li>
                                 <li class="list2"><a href="../html/info_space.html">3D体验馆</a></li>
-                                <li class="list2"><a href="#">在线下单</a></li>
+                                <li class="list2"><a href="../html/product-799.html">DLX豪华款</a></li>
+                                <li class="list2"><a href="../html/product-599.html">PRO高阶款</a></li>
+                                <li class="list2"><a href="../html/product-399.html">STD标准款 </a></li>
+                                <li class="list2"><a href="../html/product-339-dong.html">SE东鹏美家</a></li>
+                                <li class="list2"><a href="../html/product-339-jian.html">SE箭牌全屋</a></li>
+                                <li class="list2"><a href="../html/product.html">EZ基础款</a></li>
                             </ul>
                         </li>
                         <li class="list1">
                             <a href="../html/shang_service.html">上家服务</a>
                             <ul class="menu2 index-shang">
                                 <li class="list2"><a href="#">技师招募</a></li>
-                                <li class="list2"><a href="#">在线预约</a></li>
-                                <li class="list2"><a href="#">我的订单</a></li>
-                                <li class="list2"><a href="#">客户评价</a></li>
+                                <li class="list2"><a href="../html/shang_appointment.html">在线预约</a></li>
+                                <li class="list2"><a href="../html/shang_order.html">我的订单</a></li>
+                                <li class="list2"><a href="../html/shang_evaluate.html">客户评价</a></li>
                                 <li class="list2"><a href="#">服务标准</a></li>
                             </ul>
                         </li>
@@ -104,7 +110,7 @@
                             </ul>
                         </li>
                         <li class="list1">
-                            <a href="#">e键美家</a>
+                            <a href="../html/eHome/html/index.html">e键美家</a>
                             <ul class="menu2 index-ejian">
                                 <li class="list3"><a href="#">产品</a></li>
                                 <li class="list3"><a href="#">获客</a></li>
@@ -133,7 +139,7 @@
                         <li class="list1">
                             <a href="../html/about_us.html">关于我们</a>
                             <ul class="menu2 index-guan">
-                                <li class="list2"><a href="#">企业文化</a></li>
+                                <li class="list2"><a href="../html/about_us_culture.html?id=1">企业文化</a></li>
                                 <li class="list2"><a href="#">招贤纳士</a></li>
                             </ul>
                         </li>
@@ -162,48 +168,97 @@
 	<div class="about_us_bg">
 		<div class="about_us_nav">
 	    	<ul>
-	    		<li>我们是谁</li>
-	    		<li>我们的业务</li>
-	    		<li>我们的团队</li>
-	    		<li>加入我们</li>
-	    		<li>合作伙伴</li>
+	    		<li><a href="#who_are_you">我们是谁</a> </li>
+	    		<li><a href="#business">我们的业务</a></li>
+	    		<li><a href="#team_title">我们的团队</a></li>
+	    		<li><a href="#join_us">加入我们</a></li>
+	    		<li><a href="#partners">合作伙伴</a></li>
 	    	</ul>
 	    </div>
 	</div>
     
     <!--我们是谁-->
-    <div class="who_are_you">
+    <div class="who_are_you" id="who_are_you">
     	<div class="who_are_you_top">
     		<p>我们是谁</p>
     		<div class="who_are_you_top_bg"><a>一家以代理国内外知名品牌为主的建陶卫浴家居销售企业</a></div>
     	</div>
     	<div class="who_are_you_bottom">
     		<div class="who_are_you_bottom_txt">
-    			<p>我们奉行“永远领先一步”的理念</p>
-    			<p>一一我们是东箭</p>
-    			<p>东箭企业是一家以代理国内外知名品牌为主的建陶卫浴家居销售企业。集团下属杭州东箭贸易有限公司、杭州恒东卫浴有限公司、杭州东坤贸易有限公司、杭州东合建材有限公司、杭州东凯建材有限公司、浙江东箭工贸有限公司、浙江科魁网络科技有限公司、东驰物流等子公司。东箭代理的主要品牌包括TOTO、箭牌、美加华、安华、摩恩、金意陶、东鹏、高宝、万斯敦和威乃达等。</p>
-    			<p>东箭经过多年的努力，形成了自己独特的企业文化并成功地将这种文化融入到了各品牌的经营中。在业内，东箭一直以来将服务放在首位，取得了多个品牌销量多次名列全国第一的成绩。2011年推出的“360度全程安心服务”更是在行业中首次提出了为顾客提供售前、售中、售后全方位服务的理念。过去，我们凭借专业、规范的“一条龙”服务和知名的品牌、优质的产品，取得了事业的蓬勃发展，在杭州及周边区域积淀了较高的美誉。现在以至未来，我们仍将全身心地投入到东箭发展的每一个专业领域。</p>
-    		</div>
+    			<p>完整家居（浙江）有限公司成立于2014年1月，代理品牌有：箭牌卫浴、TOTO卫浴、成霖高宝、金意陶陶瓷、欧琳等等，并先后在天猫、京东、当当网、亚马逊等电商平台开设了50余家店铺，2015年突破100家。完整家居致力于让互联网家装去主材化，打造线上集群化的产品链条，线下提供端到端的户级配送及安装服务方案，打造家装生态圈！ 2014年实现年销售收入1.35亿元;2015年度的“双十一”活动中，单天销售更是达到1.23亿元，箭牌淘内同类目第一名，TOTO淘内同类目第二名，全品牌年营业额更高达3亿元;2016年度的“双十一”活动中，单天销售更是达到6.92亿元，同比增长450%。预计在未来5-8年销售额将突破百亿。</p>
+    			<p>2015年6月，完整家居领先一步开展了F2B电子商务经营模式，并于当年7月设立全资子公司优采宝（杭州）网络科技有限公司（注册资金2000万），开启“家装主材包”新模式业务板块。公司以F2B平台为媒介、以大型的仓储物流为基础、用极致的采购价格整合家装产品，是国内互联网+家装F2B模式的开拓者。通过集约化、标准化的产品让家装公司选材过程变得简单、可控，实现终端、家装公司、主材厂商的去中间化交易模式，为其提供选材、物流、安装、维修等一站式服务。</p>
+                <p>截止到目前，公司完成10大品类即卫浴、瓷砖、地板、木门、厨电、橱柜、开关、吊顶、油漆、墙纸，50余个国内外知名品牌的整合与授权,其中包括：TOTO、科勒、美标、高仪、箭牌、东鹏、安华、大自然、圣象e家、书香门第、老板、欧琳、樱花、奥普、楚楚、西蒙、飞雕等。</p>
+                <p>为了提高消费者对家装的认知及体验，2016年3月，完整家居逐步发展城市运营商。迄今为止，80余个城市、359个城区的实体门店可提供实景体验服务。消费者在接受专业人士的建议及亲自体验后，再下单，产品的相应服务也是由这些实体店来完成，形成线上、线下联动的服务闭环，以人性化的模式彻底解决消费者的后顾之忧。</p>
+                <p>完整家居着力建设电商物流，2016年物流网络覆盖28个省，4个直辖市，一个特区，369个城市。2017年将建立全国数个4万方大仓+50个城市中心仓，物流网洛覆盖90%的城市，600个城市均可送达。</p>
+                <p>同时，根据市场的需求变化开始铺上家安装售后服务体系，截止到目前，上家业务覆盖338个城市，2800个县级地区，拥有超过10000名的专业服务技师。全国的服务质量投诉率为同业最低，今年前十个月仅为0.27%。</p>
+                <p>完整家居建立了集家居建材类产品整合、物流仓储、第三方服务为一体的互联网家装的集成供应链服务商，旨在打造互联网经济时代下的家装新闭环模型，开发符合消费者，及家装渠道需求的完美产品，成为中国互联网家装行业的领航者。</p>
+            </div>
     	</div>
     </div>
     
     <!--我们的业务-->
-    <div class="business">
+    <div class="business" id="business">
         <div class="content-one">
             <div class="business_txt">
+                <p>我们业务有哪些？</p>
+                <p>优采宝成立于2015年6月，公司总部位于---杭州，隶属于东箭完整家居旗下子公司，注册资金2000万，公司主营“家装主材包”采购解决方案新模式，为用户提供选材、物流、安装维修等一站式服务。我们定位为中国首家“一站式装饰建材F2B垂直平台”及“让家装选材更轻松”的全新服务理念，凭借专业建材代理商20年的经验，为用户提供一流品牌、一流服务，塑造亲切时尚、专业简约的互联网家装选材供应链平台的品牌形象。同时以F2B平台为媒介，以大型的仓储服务为基础，提供整体配套落地服务，从而得到极致的采购价格，整合家装卫浴包、主材包，2016年已与国内外10大品类，46个主流品牌签订了战略合作协议。对于未来，优采宝将在现有业务的基础上，加大新产品研究开发和市场拓展力度，完善产品和服务配套体系，进一步加强营销网络的建设，有效拓展市场。通过前两年来的准备和发展以及取得的成绩，本阶段将逐渐步进入一个营销团队的成熟期，将大量产出业绩的阶段，优采宝未来三年销售目标：2017年20亿左右2018年50亿左右2019年100亿左右。</p>
+            </div>
+            <div class="business_txt" style="display: none">
+                <p>我们业务有哪些？</p>
+                <p>B2C隶属于东箭完整家居，旗下代理品牌有箭牌卫浴、TOTO卫浴、成霖高宝、金意陶陶瓷、欧琳等等，并先后在天猫、京东、当当网、1号店、国美在线、亚马逊等电商平台开设店铺。2015年，东箭完整家居通过不断的产品整合，新增的B2C合作品牌有：东鹏瓷砖、东鹏卫浴、摩恩、箭牌瓷砖、安华卫浴、生活家、巴洛克地板、中盛陶瓷、艺耐卫浴、大唐合盛瓷砖、楚楚吊顶、欧琳卫浴五金、马拉奇、蜘蛛、达泰瓷砖等，并将店铺数增加至百家以上。</p>
+                <p>自B2C业务开展以来，东箭完整家居立足于电子商务市场前景，开拓进取，锐意创新，公司的业绩取得了长足的发展。2013年B2C实现年销售收入5000万元，2014年实现年销售收入1.35亿元，2015年实现年销售收入3.2亿元，2016年实现年销售收入8亿元。</p>
+            </div>
+            <div class="business_txt" style="display: none">
+                <p>我们业务有哪些？</p>
+                <p>e键美家，杭州东箭完整家居旗下互联网家装品牌。依托020商业模式，实现线上订购，线下体验。即线下拥有实体体验馆，线上采用互联网家装模式，天猫、京东、苏宁皆有店铺，实现一键下单，送货上门。同时，招募传统中小型家装公司、工长、设计师入驻，致力于打造以“家”为中心的互联网家装生态圈，为用户提供超性价比的主材产品、 软装产品、施工产品、设计产品 、服务产品、 并提供完善的支付，配送，售后服务，给消费者带去优良的消费服务体验，让家装高效、省心、放心。至今，上线不到一年的时间里，e键美家的产品包已经与TOTO、科勒、美标、生活家、欧派、大自然、欧琳、樱花、飞雕等39家一线品牌达成战略合作，未来会牵手更多。</p>
+
+            </div>
+            <div class="business_txt" style="display: none">
                 <p>我们业务有哪些？</p>
                 <p>上家（杭州）科技有限公司，是一家专业从事家居建材安装，维修服务的公司，是中国目前市场规模最大、覆盖区最广、服务品类最全、移动互联网技术最领先的居家服务平台。 公司主营地板、卫浴、灯饰、橱柜等家居类产品的服务，主要服务项目包括各类家居建材的安装、维修、旧房改造、局部翻新等。 凭借在陶瓷卫浴行业累积起来的科学管理方法以及网络建设运营能力， 上家科技已在全国200个城市建立服务网络，覆盖2000多个区域，10000名专业服务技师随时恭候，为您上门服务。</p>
                 <p>优采宝成立于2015年6月，公司总部位于---杭州，隶属于东箭完整家居旗下子公司，注册资金2000万，公司主营"家装主材包"采购 解决方案新模式，为用户提供选材、物流、安装维修等一站式服务。我们定位为中国首家"一站式装饰建材F2B垂直平台"及"让家装选材更轻松" 的全新服务理念，凭任专业建材代理商20年的经验，为用户提供一流品牌、一流服务，塑造亲切时尚、专业简约的互联网加家装选材供应链平台的品牌形象。</p>
             </div>
+            <div class="business_txt" style="display: none">
+                <p>我们业务有哪些？</p>
+                <p>上家（杭州）科技有限公司，是一家专业从事家居建材安装，维修服务的公司，是中国目前市场规模最大、覆盖区最广、服务品类最全、移动互联网技术最领先的居家服务平台。 公司主营地板、卫浴、灯饰、橱柜等家居类产品的服务，主要服务项目包括各类家居建材的安装、维修、旧房改造、局部翻新等。 凭借在陶瓷卫浴行业累积起来的科学管理方法以及网络建设运营能力， 上家科技已在全国200个城市建立服务网络，覆盖2000多个区域，10000名专业服务技师随时恭候，为您上门服务。</p>
+                <p>优采宝成立于2015年6月，公司总部位于---杭州，隶属于东箭完整家居旗下子公司，注册资金2000万，公司主营"家装主材包"采购 解决方案新模式，为用户提供选材、物流、安装维修等一站式服务。我们定位为中国首家"一站式装饰建材F2B垂直平台"及"让家装选材更轻松" 的全新服务理念，凭任专业建材代理商20年的经验，为用户提供一流品牌、一流服务，塑造亲切时尚、专业简约的互联网加家装选材供应链平台的品牌形象。</p>
+            </div>
+            <!--<div class="business_txt" style="display: none">-->
+                <!--<p>我们业务有哪些？</p>-->
+                <!--<p>上家（杭州）科技有限公司，是一家专业从事家居建材安装，维修服务的公司，是中国目前市场规模最大、覆盖区最广、服务品类最全、移动互联网技术最领先的居家服务平台。 公司主营地板、卫浴、灯饰、橱柜等家居类产品的服务，主要服务项目包括各类家居建材的安装、维修、旧房改造、局部翻新等。 凭借在陶瓷卫浴行业累积起来的科学管理方法以及网络建设运营能力， 上家科技已在全国200个城市建立服务网络，覆盖2000多个区域，10000名专业服务技师随时恭候，为您上门服务。</p>-->
+                <!--<p>优采宝成立于2015年6月，公司总部位于-&#45;&#45;杭州，隶属于东箭完整家居旗下子公司，注册资金2000万，公司主营"家装主材包"采购 解决方案新模式，为用户提供选材、物流、安装维修等一站式服务。我们定位为中国首家"一站式装饰建材F2B垂直平台"及"让家装选材更轻松" 的全新服务理念，凭任专业建材代理商20年的经验，为用户提供一流品牌、一流服务，塑造亲切时尚、专业简约的互联网加家装选材供应链平台的品牌形象。</p>-->
+            <!--</div>-->
             <div class="business_img">
-                <img src="../images/business_yw-01.png">
+                <div class="brand_img">
+                    <img class="logo_img" src="../images/logo2.png" alt="" >
+                    <p class="logo_p">优采宝</p>
+                </div>
+                <div class="brand_img">
+                    <img class="logo_img" src="../images/logo3.png" alt="" >
+                    <p class="logo_p">电商网上商城</p>
+                </div>
+                <div class="brand_img">
+                    <img class="logo_img" src="../images/logo5.png" alt="" >
+                    <p class="logo_p">上家服务</p>
+                </div>
+                <div class="brand_img">
+                    <img class="logo_img" src="../images/logo7.png" alt="" >
+                    <p class="logo_p">e键美家</p>
+                </div>
+                <div class="brand_img">
+                    <img class="logo_img" src="../images/logo9.png" alt="" >
+                    <p class="logo_p">尚家物流</p>
+                </div>
+                <div class="brand_img">
+                    <img src="../images/bg012.png" alt="">
+                </div>
             </div>
         </div>
     </div>
     
     <!--我们的团队-->
     <div class="team">
-    	<div class="team_title">
+    	<div class="team_title" id="team_title">
     		<p>我们的团队</p>
     		<p>过去，我们凭借专业、规范的“一条龙”服务和知名的品牌、优质的产品，取得了事业的蓬勃发展，在杭州及周边区域积淀了较高的美誉。
                                             现在以至未来，我们仍将全身心地投入到东箭发展的每一个专业领域。</p>
@@ -215,8 +270,8 @@
     					<img src="../images/team_eg1.png" />
     				</div>
     				<div class="team_content_txt">
-    					<p>市场部</p>
-    					<P>一个专业和健全的市场部应该具备强大的市场调研功能和能力。市场部是一个企业中营销组织架构的重要组成部分。通常，企业的营销组织由市场部和销售部组成。按职能划分，市场部负责拉近产品与消费者的心理距离，销售部负责拉近产品与消费者的物理距离。</P>
+    					<p>采购中心</p>
+    					<P>指利用全球的资源 ,在全世界范围内去寻找供应商 ,寻找质量最好,价格合理的产品( 货物与服务 )，满足公司发展需要或保证生产、经营活动正常开展的一部门。</P>
     				</div>
     			</li>
     			<li>
@@ -224,8 +279,8 @@
     					<img src="../images/team_eg2.png" />
     				</div>
     				<div class="team_content_txt">
-    					<p>电商部门</p>
-    					<P>电子商务通常是指在全球各地广泛的商业贸易活动中，在因特网开放的网络环境下，基于浏览器/服务器应用方式，买卖双方不谋面地进行各种商贸活动，实现消费者的网上购物、商户之间的网上交易和在线电子支付以及各种商务活动、交易活动、金融活动和相关的综合服务活动的一种新型的商业运营模式。</P>
+    					<p>运营部</p>
+    					<P>营运部--为一个综合职能部门,对公司经营管理的全过程进行计划执行和控制。营运部对公司的各个门店日常经营行为及业务、财务等运营流程和相互衔接执行具体的指导、协调和监督职能。</P>
     				</div>
     			</li>
     			<li>
@@ -233,8 +288,8 @@
     					<img src="../images/team_eg1.png" />
     				</div>
     				<div class="team_content_txt">
-    					<p>市场部</p>
-    					<P>一个专业和健全的市场部应该具备强大的市场调研功能和能力。市场部是一个企业中营销组织架构的重要组成部分。通常，企业的营销组织由市场部和销售部组成。按职能划分，市场部负责拉近产品与消费者的心理距离，销售部负责拉近产品与消费者的物理距离。</P>
+    					<p>B2C电商部</p>
+    					<P>旗下代理品牌有箭牌卫浴、TOTO卫浴、成霖高宝、金意陶陶瓷、欧琳等等，并先后在天猫、京东、当当网、1号店、国美在线、亚马逊等电商平台开设店铺。2015年，东箭完整家居通过不断的产品整合，新增的B2C合作品牌有：东鹏瓷砖、东鹏卫浴、摩恩等。</P>
     				</div>
     			</li>
     			<li>
@@ -242,8 +297,8 @@
     					<img src="../images/team_eg2.png" />
     				</div>
     				<div class="team_content_txt">
-    					<p>电商部门</p>
-    					<P>电子商务通常是指在全球各地广泛的商业贸易活动中，在因特网开放的网络环境下，基于浏览器/服务器应用方式，买卖双方不谋面地进行各种商贸活动，实现消费者的网上购物、商户之间的网上交易和在线电子支付以及各种商务活动、交易活动、金融活动和相关的综合服务活动的一种新型的商业运营模式。</P>
+    					<p>人资部</p>
+    					<P>主要是围绕着公司的经营和管理这个中心展开的，通过招聘、录用、选拔、培训、调配、流动、考核、工资福利等各项管理活动，谋求人与事的科学结合和人与人之间的紧密结合。达到提高员工的整体素质，优化队伍结构，充分调动员工的积极性，创造性。</P>
     				</div>
     			</li>
     		</ul>
@@ -251,7 +306,7 @@
     </div>
     
     <!--加入我们-->
-    <div class="join_us">
+    <div class="join_us" id="join_us">
         <div class="content-one">
     	<div class="join_us_txt">
     		<p>收拾行李，寻找最新的自己</p>
@@ -265,7 +320,7 @@
     </div>
     
     <!--合作伙伴-->
-    <div class="partners">
+    <div class="partners" id="partners">
     	<p>合作伙伴</p>
     	<div class="partners_bg"><a>全系一线品牌合作，尽享豪华配置</a></div>
     	<div id="slider">
@@ -288,6 +343,106 @@
 				</ul>
 			</div>
 		</div>
+    </div>
+
+    <!------return-rig------右侧返回----------->
+    <ul class="return-rig">
+        <li class="index-icon-rig">
+            <div class="index-div1">
+                <p>在线咨询</p>
+            </div>
+        </li>
+        <li class="index-icon-rig">
+            <div class="index-div2">
+                <p>上门量房</p>
+            </div>
+        </li>
+        <li class="index-icon-rig">
+            <div class="index-div3">
+                <p>计算器</p>
+            </div>
+        </li>
+        <li class="index-icon-rig">
+            <a href="#top">
+                <div class="index-div4">
+                    <p>返回顶部</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+
+    <div class="return-rig-block">
+        <div class="return-rig-submit ">
+            <img class="right-close" src="../images/close.png">
+            <div class="return-rig-title">
+                <p>您好！感谢您的信任！</p>
+                <span>在线预约，我们免费为您上门量房！</span>
+            </div>
+            <div class="return-rig-form">
+                <form>
+                    <div class="return-rig-div"><span>您的称呼</span>
+                        <input type="text" placeholder="请输入您的称呼">
+                    </div>
+                    <p class="return-rig-sex">
+                        <span>性别</span>
+                        <input type="radio" name="sex"><span class="radio">男</span>
+                        <input type="radio" name="sex"><span class="radio">女</span>
+                    </p>
+                    <div  class="return-rig-div"><span>手机号码</span>
+                        <input type="text" placeholder="请输入您的手机号码">
+                    </div>
+                    <div  class="return-rig-div"><span>所在城市</span>
+                        <select>
+                            <option value="1" selected>杭州</option>
+                            <option value="2" selected>绍兴</option>
+                            <option value="3" selected>义务</option>
+                            <option value="4" selected>金华</option>
+                            <option value="5" selected>温州</option>
+                        </select>
+                    </div>
+                    <div  class="return-rig-div"><span>小区名称</span>
+                        <input type="text"placeholder="请填写小区的详细信息">
+                    </div>
+                    <div  class="return-rig-div">
+                        <input class="now-button" type="button"value="立即预约">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="return-rig-calc">
+            <img class="right-close" src="../images/close.png">
+            <div class="return-rig-title ">
+                <div class="calc-title">
+                    <i></i><span>计算器</span>
+                </div>
+            </div>
+            <div class="return-rig-form">
+                <form>
+                    <div class="return-rig-div"><span>房屋面积</span>
+                        <input type="text" placeholder="请输入您的房屋面积"><b class="mUnit">㎡</b>
+                    </div>
+                    <div  class="return-rig-div"><span>房屋类型</span>
+                        <select>
+                            <option value="1" selected>一室一厅</option>
+                            <option value="2">一室一厅</option>
+                            <option value="3">一室一厅</option>
+                            <option value="4">一室一厅</option>
+                            <option value="5">一室一厅</option>
+                        </select>
+                    </div>
+                    <div  class="return-rig-div"><span>您的称呼</span>
+                        <input type="text"placeholder="请输入您的称呼">
+                    </div>
+                    <div  class="return-rig-div"><span>手机号码</span>
+                        <input type="text" placeholder="请输入您的手机号码">
+                    </div>
+                    <div  class="return-rig-div">
+                        <input class="now-button" type="button"value="免费计算">
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 
 </main>
@@ -349,28 +504,26 @@
     </div>
 </footer>
 
-</body>
 <script type="text/javascript" src="../js/jquery.min.js" ></script>
 <script type="text/javascript" src="../js/about_slider.js" ></script>
 <script type="text/javascript">
-	$(function() {
-		var bannerSlider = new Slider($('#banner_tabs'), {
-			time: 5000,
-			delay: 400,
-			event: 'hover',
-			auto: true,
-			mode: 'fade',
-			controller: $('#bannerCtrl'),
-			activeControllerCls: 'active'
-		});
-		$('#banner_tabs .flex-prev').click(function() {
-			bannerSlider.prev()
-		});
-		$('#banner_tabs .flex-next').click(function() {
-			bannerSlider.next()
-		});
-	})
-
+    $(function() {
+        var bannerSlider = new Slider($('#banner_tabs'), {
+            time: 5000,
+            delay: 400,
+            event: 'hover',
+            auto: true,
+            mode: 'fade',
+            controller: $('#bannerCtrl'),
+            activeControllerCls: 'active'
+        });
+        $('#banner_tabs .flex-prev').click(function() {
+            bannerSlider.prev()
+        });
+        $('#banner_tabs .flex-next').click(function() {
+            bannerSlider.next()
+        });
+    })
 
     $(function(){
         $(function(){
@@ -378,7 +531,9 @@
         });
     });
 </script>
+
 <!----city-js-->
 <script type="text/javascript" src="../js/city_select.js"></script>
-
+<script type="text/javascript" src="../js/brand.js"></script>
+</body>
 </html>

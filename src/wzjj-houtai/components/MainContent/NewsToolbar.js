@@ -6,13 +6,13 @@ import { withRouter } from 'react-router'
 class NewsToolbar extends React.Component {
 
   handleRefleshClick = () => {
-    if(this.props.location.pathname === '/news') {
+    if(this.props.location.pathname === '/houtai/news') {
       this.props.updateNews()
     }
   }
 
   handleAddClick = () => {
-    if(this.props.location.pathname === '/news') {
+    if(this.props.location.pathname === '/houtai/news') {
       this.props.addNews()
     }
   }

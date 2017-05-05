@@ -31,7 +31,23 @@ module.exports = (env={}) => ({  // env={} so if not specified, env.production =
       },
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ],
+        include: [
+          path.resolve(__dirname, "src")
+        ],
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            }
+          },
+          {
+            loader: 'postcss-loader'
+          }
+        ],
       },
       {
         test: /\.(ttf|woff|jpeg|jpg|png|gif|svg)$/,

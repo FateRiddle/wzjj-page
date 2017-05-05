@@ -64,5 +64,34 @@ $(function () {
         }
     }
 
-})
+});
 
+//------city选择-------------
+var oClick =  document.getElementById('ClickMe');
+var oClosebt = document.getElementById('closebt');
+var oSpan = oClosebt.getElementsByTagName('span');
+
+for(var i=0; i<oSpan.length;i++){
+    oSpan[i].onclick = function () {
+        oClick.children[0].innerHTML = this.innerHTML;
+    }
+}
+
+//------------rig--tanchu框----------------
+var allHeight=$(window).height();
+$('.return-rig-block').height(allHeight);
+$(".index-div2").click(function(){
+    $(".return-rig-block").css("display","block");
+    $(".return-rig-submit").addClass("return-display").siblings().removeClass("return-display");
+})
+$(".right-close").click(function(){
+    $(".return-rig-block").css("display","none");
+})
+$('.index-div3').click(function(){
+    $(".return-rig-block").css("display","block");
+    $(".return-rig-calc").addClass("return-display").siblings().removeClass("return-display");
+});
+
+$("select").change(function(){
+   $(this).css("color","#000");
+});

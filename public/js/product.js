@@ -1,55 +1,29 @@
-//banner背景轮播
-	var pic=2;
-	function show()
-	{
-		
-		//背景轮播
-		$(".head-bg").css("background","url(../images/products_banner"+pic+".png)");
-		pic++;
-		if(pic>3)
-		{
-			pic=1;
-		}
-	}
-	window.setInterval("show()",5000);
-	
+
 	//开始
 	$(function(){
-		
-		//瓷砖类
-		//选项
-		$(".classification_num1_sli_nav ul li").click(function(){
-			$(this).css({"color":"#ffc519","background":"url(../images/classification_bg.png)"}).siblings("li").css({"background":"","color":""});
-		});
-		
-		//轮播
-            var i=0;
-            var size=4;
-            
-            $(".num1_btn1").click(function () {
-                i--;
-                if(i==-1){
-                    $(".images1").css({left:-(size-1)*217});
-                    i=size-2;
-                }
-                $(".images1").stop().animate({left:-i*217}, 500);
-            });
-            
-            $(".num1_btn2").click(function () {
-                i++;
-                if(i==size){
-                    $(".images1").css({left:0});
-                    i=1;
-                }
-                $(".images1").stop().animate({left:-i*217}, 500);
-               
-            });
+        //点击移动
+		function onclick(obj,obj1,obj2,speed,x,y) {
+			obj1.click(function () {
+				speed--;
+				if(speed==(2-x)){
+					obj.css({left:-y});
+					speed= -2;
+				}
+				obj.stop().animate({left:speed*217}, 500);
+			});
+			obj2.click(function () {
+				speed++;
+				if(speed==0){
+					obj.css({left:(3-x)*y});
+					speed = -(x -4) ;
+				}
+				obj.stop().animate({left:speed*217}, 500);
+			});
+		}
 
-	    
 		//图片
 		//一
 		$(".num1_li_btn1").click(function(){
-			$(".num1_li_pic1").load(location.href+".num1_li_pic1"); 
 			$(".num1_li_pic1").css("display","block");
 			$(".num1_li_pic2").css("display","none");
 			$(".num1_li_pic3").css("display","none");
@@ -76,35 +50,50 @@
 			$(".classification_num1_sli2_pic").css("display","none");
 			$(".classification_num1_sli3_pic").css("display","block");
 		});
-		
+		//瓷砖类
+		var img1 = -2;
+		var lil1 = $(".images1 > li").length;
+		var liw1 = $(".images1 > li").outerWidth();
+        $(".images1").width(lil1*liw1);
+		onclick($(".images1"),$(".num1_btn1"),$(".num1_btn2"),img1,lil1,liw1);
+
+
 		//卫浴类
 		//选项
 		$(".classification_num2_sli_nav ul li").click(function(){
 			$(this).css({"color":"#ffc519","background":"url(../images/classification_bg.png)"}).siblings("li").css({"background":"","color":""});
 		});
 		//轮播
-	    var x=0;
-            var size=4;
-            
-            $(".num2_btn1").click(function () {
-                x--;
-                if(x==-1){
-                    $(".images2").css({left:-(size-1)*217});
-                    x=size-2;
-                }
-                $(".images2").stop().animate({left:-x*217}, 500);
-            });
-            
-            $(".num2_btn2").click(function () {
-                x++;
-                if(x==size){
-                    $(".images2").css({left:0});
-                    x=1;
-                }
-                $(".images2").stop().animate({left:-x*217}, 500);
-               
-            });
-	    
+		var img2_0 = -2;
+		var img2_1 = -2;
+		var img2_2 = -2;
+		var img2_3 = -2;
+		var img2_4 = -2;
+		var img2_5 = -2;
+		var img2_6 = -2;
+		var lil2_0 = $('.images2').eq(0).children().length;
+		var lil2_1 = $('.images2').eq(1).children().length;
+		var lil2_2 = $('.images2').eq(2).children().length;
+		var lil2_3 = $('.images2').eq(3).children().length;
+		var lil2_4 = $('.images2').eq(4).children().length;
+		var lil2_5 = $('.images2').eq(5).children().length;
+		var lil2_6 = $('.images2').eq(6).children().length;
+		var liw2 = $(".images2 > li").outerWidth();
+		$(".images2").eq(0).width(lil2_0*liw2);
+		$(".images2").eq(1).width(lil2_1*liw2);
+		$(".images2").eq(2).width(lil2_2*liw2);
+		$(".images2").eq(3).width(lil2_3*liw2);
+		$(".images2").eq(4).width(lil2_4*liw2);
+		$(".images2").eq(5).width(lil2_5*liw2);
+		$(".images2").eq(6).width(lil2_6*liw2);
+		onclick($(".images2").eq(0),$(".num2_btn1"),$(".num2_btn2"),img2_0,lil2_0,liw2);
+		onclick($(".images2").eq(1),$(".num2_btn1"),$(".num2_btn2"),img2_1,lil2_1,liw2);
+		onclick($(".images2").eq(2),$(".num2_btn1"),$(".num2_btn2"),img2_2,lil2_2,liw2);
+		onclick($(".images2").eq(3),$(".num2_btn1"),$(".num2_btn2"),img2_3,lil2_3,liw2);
+		onclick($(".images2").eq(4),$(".num2_btn1"),$(".num2_btn2"),img2_4,lil2_4,liw2);
+		onclick($(".images2").eq(5),$(".num2_btn1"),$(".num2_btn2"),img2_5,lil2_5,liw2);
+		onclick($(".images2").eq(6),$(".num2_btn1"),$(".num2_btn2"),img2_6,lil2_6,liw2);
+
 		//二
 		$(".num2_li_btn1").click(function(){
 			$(".num2_li_pic1").css("display","block");
@@ -133,27 +122,45 @@
 		
 		//吊顶
 		//轮播
-	    var y=0;
-            var size=4;
-            
-            $(".num3_btn1").click(function () {
-                y--;
-                if(y==-1){
-                    $(".images3").css({left:-(size-1)*217});
-                    y=size-2;
-                }
-                $(".images3").stop().animate({left:-y*217}, 500);
-            });
-            
-            $(".num3_btn2").click(function () {
-                y++;
-                if(y==size){
-                    $(".images3").css({left:0});
-                    y=1;
-                }
-                $(".images3").stop().animate({left:-y*217}, 500);
-               
-            });
+
+		var img3_0 = -2;
+		var img3_1 = -2;
+		var img3_2 = -2;
+		var lil3_0 = $('.images3').eq(0).children().length;
+		var lil3_1 = $('.images3').eq(1).children().length;
+		var lil3_2 = $('.images3').eq(2).children().length;
+		var liw3 = $(".images3 > li").outerWidth();
+		$(".images3").eq(0).width(lil3_0*liw3);
+		$(".images3").eq(1).width(lil3_1*liw3);
+		$(".images3").eq(2).width(lil3_2*liw3);
+
+		onclick($(".images3").eq(0),$(".num3_btn1"),$(".num3_btn2"),img3_0,lil3_0,liw3);
+		onclick($(".images3").eq(1),$(".num3_btn1"),$(".num3_btn2"),img3_1,lil3_1,liw3);
+		onclick($(".images3").eq(2),$(".num3_btn1"),$(".num3_btn2"),img3_2,lil3_2,liw3);
+        $(".num3_li_btn1").click(function(){
+			$(".num3_li_pic1").css("display","block");
+			$(".num3_li_pic2").css("display","none");
+			$(".num3_li_pic3").css("display","none");
+			$(".classification_num3_sli1_pic").css("display","block");
+			$(".classification_num3_sli2_pic").css("display","none");
+			$(".classification_num3_sli3_pic").css("display","none");
+		});
+		$(".num3_li_btn2").click(function(){
+			$(".num3_li_pic1").css("display","none");
+			$(".num3_li_pic2").css("display","block");
+			$(".num3_li_pic3").css("display","none");
+			$(".classification_num3_sli1_pic").css("display","none");
+			$(".classification_num3_sli2_pic").css("display","block");
+			$(".classification_num3_sli3_pic").css("display","none");
+		});
+		$(".num3_li_btn3").click(function(){
+			$(".num3_li_pic1").css("display","none");
+			$(".num3_li_pic2").css("display","none");
+			$(".num3_li_pic3").css("display","block");
+			$(".classification_num3_sli1_pic").css("display","none");
+			$(".classification_num3_sli2_pic").css("display","none");
+			$(".classification_num3_sli3_pic").css("display","block");
+		});
 		
 		//厨电类
 		//选项
@@ -186,49 +193,145 @@
 			$(".classification_num4_sli3_pic").css("display","block");
 		});
 		//轮播
-		var z=0;
-            var size=4;
-            $(".num4_btn1").click(function () {
-                z--;
-                if(z==-1){
-                    $(".images4").css({left:-(size-1)*217});
-                    z=size-2;
-                }
-                $(".images4").stop().animate({left:-z*217}, 500);
-            });
-            
-            $(".num4_btn2").click(function () {
-                z++;
-                if(z==size){
-                    $(".images4").css({left:0});
-                    z=1;
-                }
-                $(".images4").stop().animate({left:-z*217}, 500);
-               
-            });
-	    
+		var img4_0 = -2;
+		var img4_1 = -2;
+		var img4_2 = -2;
+		var img4_3 = -2;
+		var img4_4 = -2;
+		var lil4_0 = $('.images4').eq(0).children().length;
+		var lil4_1 = $('.images4').eq(1).children().length;
+		var lil4_2 = $('.images4').eq(2).children().length;
+		var lil4_3 = $('.images4').eq(3).children().length;
+		var lil4_4 = $('.images4').eq(4).children().length;
+
+		var liw4 = $(".images4 > li").outerWidth();
+		$(".images4").eq(0).width(lil4_0*liw4);
+		$(".images4").eq(1).width(lil4_1*liw4);
+		$(".images4").eq(2).width(lil4_2*liw4);
+		$(".images4").eq(3).width(lil4_3*liw4);
+		$(".images4").eq(4).width(lil4_4*liw4);
+		onclick($(".images4").eq(0),$(".num4_btn1"),$(".num4_btn2"),img4_0,lil4_0,liw4);
+		onclick($(".images4").eq(1),$(".num4_btn1"),$(".num4_btn2"),img4_1,lil4_1,liw4);
+		onclick($(".images4").eq(2),$(".num4_btn1"),$(".num4_btn2"),img4_2,lil4_2,liw4);
+		onclick($(".images4").eq(3),$(".num4_btn1"),$(".num4_btn2"),img4_3,lil4_3,liw4);
+		onclick($(".images4").eq(4),$(".num4_btn1"),$(".num4_btn2"),img4_4,lil4_4,liw4);
 	    //门类
 		//轮播
-		var p=0;
-            var size=4;
-            $(".num5_btn1").click(function () {
-                p--;
-                if(p==-1){
-                    $(".images5").css({left:-(size-1)*217});
-                    p=size-2;
-                }
-                $(".images5").stop().animate({left:-p*217}, 500);
-            });
+		var img5_0 = -2;
+		var img5_1 = -2;
+		var img5_2 = -2;
+		var lil5_0 = $('.images5').eq(0).children().length;
+		var lil5_1 = $('.images5').eq(1).children().length;
+		var lil5_2 = $('.images5').eq(2).children().length;
+        var liw5 = $('.images5').eq(2).children('li').eq(0).outerWidth();
+
+
+		$(".images5").eq(0).width(lil5_0*liw5);
+		$(".images5").eq(1).width(lil5_1*liw5);
+		$(".images5").eq(2).width(lil5_2*liw5);
+		onclick($(".images5").eq(0),$(".num5_btn1"),$(".num5_btn2"),img5_0,lil5_0,liw5);
+		onclick($(".images5").eq(1),$(".num5_btn1"),$(".num5_btn2"),img5_1,lil5_1,liw5);
+		onclick($(".images5").eq(2),$(".num5_btn1"),$(".num5_btn2"),img5_2,lil5_2,liw5);
+            $(".num5_li_btn1").click(function(){
+			$(".num5_li_pic1").css("display","block");
+			$(".num5_li_pic2").css("display","none");
+			$(".num5_li_pic3").css("display","none");
+			//轮播
+			$(".classification_num5_sli1_pic").css("display","block");
+			$(".classification_num5_sli2_pic").css("display","none");
+			$(".classification_num5_sli3_pic").css("display","none");
+		});
+		$(".num5_li_btn2").click(function(){
+			$(".num5_li_pic1").css("display","none");
+			$(".num5_li_pic2").css("display","block");
+			$(".num5_li_pic3").css("display","none");
+			//轮播
+			$(".classification_num5_sli1_pic").css("display","none");
+			$(".classification_num5_sli2_pic").css("display","block");
+			$(".classification_num5_sli3_pic").css("display","none");
+		});
+		$(".num5_li_btn3").click(function(){
+			$(".num5_li_pic1").css("display","none");
+			$(".num5_li_pic2").css("display","none");
+			$(".num5_li_pic3").css("display","block");
+			//轮播
+			$(".classification_num5_sli1_pic").css("display","none");
+			$(".classification_num5_sli2_pic").css("display","none");
+			$(".classification_num5_sli3_pic").css("display","block");
+		});
+		
+		//地板类
+		//轮播
+		var img6 = -2;
+		var lil6 = $(".images6 > li").length;
+		var liw6 = $(".images6 > li").outerWidth();
+		$(".images6").width(lil6*liw6);
+		onclick($(".images6"),$(".num6_btn1"),$(".num6_btn2"),img6,lil6,liw6);
             
-            $(".num5_btn2").click(function () {
-                p++;
-                if(p==size){
-                    $(".images5").css({left:0});
-                    p=1;
-                }
-                $(".images5").stop().animate({left:-p*217}, 500);
-               
-            });
+        $(".num6_li_btn1").click(function(){
+			$(".num6_li_pic1").css("display","block");
+			$(".num6_li_pic2").css("display","none");
+			$(".num6_li_pic3").css("display","none");
+			//轮播
+			$(".classification_num6_sli1_pic").css("display","block");
+			$(".classification_num6_sli2_pic").css("display","none");
+			$(".classification_num6_sli3_pic").css("display","none");
+		});
+		$(".num6_li_btn2").click(function(){
+			$(".num6_li_pic1").css("display","none");
+			$(".num6_li_pic2").css("display","block");
+			$(".num6_li_pic3").css("display","none");
+			//轮播
+			$(".classification_num6_sli1_pic").css("display","none");
+			$(".classification_num6_sli2_pic").css("display","block");
+			$(".classification_num6_sli3_pic").css("display","none");
+		});
+		$(".num6_li_btn3").click(function(){
+			$(".num6_li_pic1").css("display","none");
+			$(".num6_li_pic2").css("display","none");
+			$(".num6_li_pic3").css("display","block");
+			//轮播
+			$(".classification_num6_sli1_pic").css("display","none");
+			$(".classification_num6_sli2_pic").css("display","none");
+			$(".classification_num6_sli3_pic").css("display","block");
+		});
+		
+		
+		//职能盖板类
+		//轮播
+		var img7 = -2;
+		var lil7 = $(".images7 > li").length;
+		var liw7 = $(".images7 > li").outerWidth();
+		$(".images7").width(lil7*liw7);
+		onclick($(".images7"),$(".num7_btn1"),$(".num7_btn2"),img7,lil7,liw7);
+            
+        $(".num7_li_btn1").click(function(){
+			$(".num7_li_pic1").css("display","block");
+			$(".num7_li_pic2").css("display","none");
+			$(".num7_li_pic3").css("display","none");
+			//轮播
+			$(".classification_num7_sli1_pic").css("display","block");
+			$(".classification_num7_sli2_pic").css("display","none");
+			$(".classification_num7_sli3_pic").css("display","none");
+		});
+		$(".num7_li_btn2").click(function(){
+			$(".num7_li_pic1").css("display","none");
+			$(".num7_li_pic2").css("display","block");
+			$(".num7_li_pic3").css("display","none");
+			//轮播
+			$(".classification_num7_sli1_pic").css("display","none");
+			$(".classification_num7_sli2_pic").css("display","block");
+			$(".classification_num7_sli3_pic").css("display","none");
+		});
+		$(".num7_li_btn3").click(function(){
+			$(".num7_li_pic1").css("display","none");
+			$(".num7_li_pic2").css("display","none");
+			$(".num7_li_pic3").css("display","block");
+			//轮播
+			$(".classification_num7_sli1_pic").css("display","none");
+			$(".classification_num7_sli2_pic").css("display","none");
+			$(".classification_num7_sli3_pic").css("display","block");
+		});
 		
 		
 		//套餐推荐偶数靠左
