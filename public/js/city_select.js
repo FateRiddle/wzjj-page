@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Created by Administrator on 2017/4/1.
  */
 $(function () {
@@ -92,6 +92,11 @@ $('.index-div3').click(function(){
     $(".return-rig-calc").addClass("return-display").siblings().removeClass("return-display");
 });
 
-$("select").change(function(){
-   $(this).css("color","#000");
+
+//右侧导航---返回顶部
+$(function() {
+    $(".index-div4").click(function(event) {
+        event.preventDefault();
+        $("html,body").animate({"scrollTop":0},800);
+    });
 });

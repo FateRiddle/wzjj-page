@@ -1,5 +1,5 @@
-/*----header-----*/
-.the-top{overflow:hidden;height:40px;background:#39393a;}
+﻿/*----header-----*/
+.the-top{overflow:hidden;height:40px;background:#39393a;min-width: 1200px;}
 .content-one{margin:0 auto;width:1200px;}
 .the-top-left{float:left;}
 .the-top-left p{font-size:14px;color:#fff;line-height:40px;}
@@ -28,14 +28,14 @@
 #closebt tr:last-child td{border:none}
 
 /*---solid--焦点图--*/
-.the-head{overflow: hidden;}
+/*.the-head{overflow: hidden;}*/
 .swiper-container {
-   width: 100%;
+    width: 100%;
+    min-width:1200px;
     height: 700px;
     overflow: hidden;
-    margin: -4px 0;
+    margin: 0 auto -4px;
 }
-
 /*-导航-nav-*/
 .nav{
     margin: auto;
@@ -44,6 +44,7 @@
     position: absolute;
     z-index: 99;
     background:rgba(0,0,0,0.3);
+    min-width: 1200px;
 }
 .nav-left{float: left;margin-left: -15px;position: absolute;z-index: 99;width: 175px;}
 .nav-left img{width: 100%;}
@@ -92,10 +93,10 @@
 .index-re{width: 36%;padding-left: 64%;}
 .index-guan{width: 30.5%;padding-left: 69.5%;}
 
-.head-bg{overflow: hidden;width: 100%;}
+.head-bg{overflow: hidden;min-width: 1200px;margin: 0 auto}
 /*------main--begin------*/
-main{overflow:hidden;}
-.home-about{overflow:hidden;height:490px;background:url("../images/index-01.jpg") no-repeat;}
+/*main{overflow:hidden;}*/
+.home-about{overflow:hidden;height:490px;background: center url("../images/index-01.jpg")  no-repeat;margin: 0 auto;min-width: 1200px}
 .home-about-one{float:left;margin:30px 0 10px 0;}
 .home-about-one-img{overflow:hidden;width:235px;height:240px;border:10px solid #ffc519;}
 .home-about-one-img img{
@@ -179,7 +180,7 @@ main{overflow:hidden;}
 /*----------------------------*/
 
 /*--home-product--two--*/
-.home-product{overflow:hidden;background:#efefef;padding-bottom:65px}
+.home-product{overflow:hidden;background:#efefef;padding-bottom:65px;min-width:1200px}
 .home-product-set{overflow:hidden}
 .home-product-one{padding:50px 0 0 0;overflow:hidden;}
 .home-product-one-left{float:left;overflow:hidden;}
@@ -381,6 +382,7 @@ main{overflow:hidden;}
     overflow: hidden;
     background: url("../images/index-04.jpg") no-repeat center;
     height: 1020px;
+    min-width: 1200px;
 }
 .home-service-one{
     overflow: hidden;
@@ -491,7 +493,7 @@ main{overflow:hidden;}
 }
 
 /*--------home-key---e键美家---------*/
-.home-key{overflow:hidden;height:1090px;background:url("../images/index-05.jpg") no-repeat center}
+.home-key{overflow:hidden;height:1090px;background:url("../images/index-05.jpg") no-repeat center;min-width: 1200px}
 .home-key-one{width:1200px;margin:0 auto;overflow:hidden;padding-top:100px}
 .home-key-one h4{text-align:center;font-size:30px;color:#fff}
 .home-key-one small{display:block;text-align:center;font-size:20px;color:#fff;margin:10px 0}
@@ -519,7 +521,7 @@ main{overflow:hidden;}
     padding-top: 35px;
 }
 /*旋转木马必要样式*/
-.poster-main{ position:relative;width:800px;height:600px;}
+.poster-main{ position:relative;width:800px;height:600px;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;}
 .poster-main a,.poster-main img{display:block;width: 100%;height: 100%;}
 .poster-list li{border: 10px solid #fff;}
 .poster-main .poster-list{width:800px;height:600px;}
@@ -881,9 +883,9 @@ main{overflow:hidden;}
 }
 
 /*------footer--底部------*/
-footer{overflow:hidden}
-.foot-one{height:15px;background:#727171}
-.foot-two{overflow:hidden;background:#272621;padding-top:30px;height:190px;color:#fff}
+/*footer{overflow:hidden}*/
+.foot-one{height:15px;background:#727171;min-width: 1200px}
+.foot-two{overflow:hidden;background:#272621;padding-top:30px;height:190px;color:#fff;min-width: 1200px}
 .foot-two-left{float:left}
 .foot-two-left-li-01{float:left;width:395px}
 .foot-two-left-li-01 li{margin-bottom:15px}
@@ -900,7 +902,7 @@ footer{overflow:hidden}
 /*---------------------------------------------------------------------------------------------------------------------*/
 
 /*-----online-mall---网上商城页面-----*/
-.online-mall-bg{overflow: hidden;height:500px;background: url("../images/online-bg.png")no-repeat;}
+.online-mall-bg{overflow: hidden;height:500px;background: url("../images/online-bg.png")no-repeat;min-width: 1200px;margin: 0 auto}
 .online-mall-bg-txt{
     width: 430px;
     margin: auto;
@@ -991,7 +993,7 @@ footer{overflow:hidden}
 /*---------------------------------------------------------------------------------------------------------------------*/
 
 /*-----product-suit--产品套餐页面-----*/
-.product-suit{overflow: hidden;}
+.product-suit{overflow: hidden;min-width: 1200px}
 .product-suit-one{
     overflow: hidden;
     height: 696px;
@@ -1057,7 +1059,7 @@ footer{overflow:hidden}
 /*---------------------------------------------------------------------------------------------------------------------*/
 
 /*-----3d_pavilion--3d体验馆页面-----*/
-.info-space{overflow:hidden}
+.info-space{overflow:hidden;min-width: 1200px}
 .info-space-one{overflow:hidden;height:700px;background:url("../images/products_suit/info-space-bg.jpg")}
 .info-space-one-01{margin-top:260px}
 .info-space-one-02{float:right;text-align:right;margin-top:450px}
@@ -1072,8 +1074,9 @@ footer{overflow:hidden}
 /*-----product--套装详情页-----*/
 .head-bg-01 {
     overflow: hidden;
-    width: 1920px;
+    min-width: 1200px;
     height: 700px;
+    margin: 0 auto;
 }
 .detail-bg-01{background: url("../images/products_suit/product-d-01.jpg") no-repeat;}
 .detail-bg-02{background: url("../images/products_suit/product-d-02.jpg") no-repeat;}
@@ -1271,7 +1274,7 @@ footer{overflow:hidden}
 /*分类详情*/
 
 .classification {
-    min-width: 1000px;
+    min-width: 1200px;
     width: 100%;
     margin-top: 30px;
     /*padding-bottom: 70px;*/
@@ -1444,6 +1447,9 @@ footer{overflow:hidden}
     cursor: pointer;
     display: none;
     font-size: 30px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .navshow:hover .btn {
@@ -1466,6 +1472,7 @@ footer{overflow:hidden}
     padding-top: 60px;
 }
 .classification_num2_title{
+    width: 800px;
     float: left;
 }
 .classification_num2_title a:nth-of-type(1) {
@@ -1488,7 +1495,7 @@ footer{overflow:hidden}
     float: right;
 }
 .classification_num2_active{
-   float: left;
+    float: left;
     margin-left: 18px;
     margin-top: 49px;
     cursor: pointer;
@@ -1497,11 +1504,13 @@ footer{overflow:hidden}
 .classification_num2_active:nth-of-type(1) a{
     color: #ffc519;
 }
-.classification_num2_pic {
+.classification_num2_pic{
+    overflow: hidden;
     margin-top: 30px;
     float: left;
 }
 .classification_num2_sli {
+    overflow: hidden;
     width: 650px;
     height: 390px;
     margin-top: 30px;
@@ -1577,6 +1586,7 @@ footer{overflow:hidden}
     /*margin-top: 65px;*/
 }
 
+
 /*---吊顶类--*/
 .classification_num3 {
     width: 1200px;
@@ -1585,6 +1595,7 @@ footer{overflow:hidden}
     padding-top: 60px;
 }
 .classification_num3_title{
+    width: 800px;
     float: left;
 }
 .classification_num3_title a:nth-of-type(1) {
@@ -1705,6 +1716,7 @@ footer{overflow:hidden}
     padding-top: 60px;
 }
 .classification_num4_title{
+    width: 800px;
     float: left;
 }
 .classification_num4_title a:nth-of-type(1) {
@@ -1823,6 +1835,7 @@ footer{overflow:hidden}
     padding-top: 60px;
 }
 .classification_num5_title{
+    width: 800px;
     float: left;
 }
 .classification_num5_title a:nth-of-type(1) {
@@ -2209,7 +2222,7 @@ footer{overflow:hidden}
 /*--套餐说明--*/
 .package_instructions
 {
-    width: 1920px;
+    min-width: 1200px;
     height: 480px;
     background: #fff;
 }
@@ -2473,8 +2486,8 @@ footer{overflow:hidden}
 
 
 /*-----shang-service--上家服务页面-----*/
-.shang-service{overflow: hidden;}
-.shang-service-bg{overflow:hidden;height:600px;background:url("../images/shang_service/shang-service-bg.jpg")no-repeat}
+.shang-service{overflow: hidden;min-width: 1200px}
+.shang-service-bg{overflow:hidden;height:600px;background:url("../images/shang_service/shang-service-bg.jpg") 100% 100% no-repeat;margin: 0 auto;min-width:1200px}
 .shang-service-list{overflow:hidden;margin:40px 0 0}
 .shang-service-list li{float:left;margin-right:18px}
 .shang-service-list li:last-child{margin-right:0}
@@ -2743,7 +2756,7 @@ footer{overflow:hidden}
 /*-------------------------------------------------------------------------------------------------*/
 
 /*-----hot_Consultant--热点资讯-----*/
-.head-bg-hot{position:relative;width: 100%;overflow: hidden;}
+.head-bg-hot{position:relative;min-width: 1200px;overflow: hidden;margin: 0 auto}
 /*-----内容部分-----*/
 .content_more{width:1200px;height:580px;margin:0 auto;padding-bottom:95px}
 /*---选项---*/
@@ -2840,7 +2853,8 @@ footer{overflow:hidden}
 
 /*-----city_operation--城市运营商-----*/
 
-.head-bg-city{position: relative;top:100px;width: 100%;height: 320px;}
+.head-bg-city{position: relative;top:100px;min-width: 1200px;height: 320px;margin: 0 auto}
+.head-bg-city img{width: 100%}
 .city-bg{min-width:1200px;width:100%;background:#f4f4f4}
 /*城市运营商下属导航*/
 .nav_bg{min-width:1000px;width:100%;height:35px;background:#c6c4c5}
@@ -3148,7 +3162,7 @@ footer{overflow:hidden}
 /*-----about_us--关于我们-----*/
 
 /*关于我们下属导航背景*/
-.about_us_bg{min-width:1000px;width:100%;height:60px;background:#f1f1f1}
+.about_us_bg{min-width:1200px;width:100%;height:60px;background:#f1f1f1}
 
 /*关于我们下属导航*/
 .about_us_nav{width:1200px;height:60px;margin:0 auto}
@@ -3256,7 +3270,7 @@ footer{overflow:hidden}
 
 
 /*加入我们*/
-.join_us{width:100%;height:570px;background:url(../images/team1.png)}
+.join_us{min-width: 1200px;height:570px;background:url(../images/team1.png) 100% 100% no-repeat}
 .join_us_txt {
     width: 455px;
     height: 360px;
@@ -3572,6 +3586,7 @@ footer{overflow:hidden}
 #banner-top{
     height: 500px;
     width: 100%;
+    min-width: 1200px;
 }
 #banner-top>img{
     width:100%;

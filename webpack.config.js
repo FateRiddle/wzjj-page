@@ -73,10 +73,10 @@ module.exports = (env={}) => ({  // env={} so if not specified, env.production =
   },
   devtool:"cheap-module-eval-source-map",//"cheap-module-eval-source-map",
   plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap:!env.production,
-      compress:env.production,
-    }),
+    // new webpack.optimize.UglifyJsPlugin({
+    //   sourceMap:!env.production,
+    //   compress:env.production,
+    // }),
     new webpack.optimize.CommonsChunkPlugin("commons"),//output will be commons.chunk.js
     // new ExtractTextPlugin("style.css"),
   ],

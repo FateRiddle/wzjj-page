@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="description" content="东箭完整家居">
     <meta content="东箭完整家居" name="keywords">
+    <link rel="Shortcut Icon" href="../images/favicon.ico">
     <title>东箭完整家居--热点资讯</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css" />
@@ -67,7 +68,7 @@
                     </div>
                 </div><!--city---over-->
                 <a href="../html/The_login.html" class="login_a">登录</a>
-                <a href="#" class="login_a">注册</a>
+                <a href="../html/register.html" class="login_a">注册</a>
             </div>
         </div>
     </div>
@@ -75,7 +76,7 @@
     <div class="the-head">
         <div class="nav">
             <div class="content-one">
-                <div class="nav-left"><img src="../images/icon-03.png"></div>
+                <div class="nav-left"><a href="../html/index.html"><img src="../images/icon-03.png"></a></div>
                 <!--menu--菜单-->
                 <div class="nav-rig">
                 <ul class="menu1">
@@ -140,7 +141,7 @@
                     <li class="list1">
                         <a href="../html/about_us.html">关于我们</a>
                         <ul class="menu2 index-guan">
-                            <li class="list2"><a href="#">企业文化</a></li>
+                            <li class="list2"><a href="../html/about_us_culture.html?id=1">企业文化</a></li>
                             <li class="list2"><a href="#">招贤纳士</a></li>
                         </ul>
                     </li>
@@ -217,6 +218,11 @@
 </footer>
 <script src="/dist/commons.chunk.js" ></script>
 <script src="/dist/page_news.chunk.js" ></script>
+<script>
+	 $(function(){
+        $(".menu1 .list1:eq(6)").css("background","rgba(255,255,255,0.5)");
+    });
+</script>
 </body>
 <!----city-js-->
 <script type="text/javascript" src="../js/city_select.js"></script>

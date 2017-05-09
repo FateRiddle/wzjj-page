@@ -14,8 +14,6 @@ class DianshangNews extends React.Component {
 
   updateNews = () => {
     return fetchNews().then(res => {
-      console.log(res.recordset)
-      console.log(res.recordset.reverse())
       const news = res.recordset.reverse()
       this.setState({news})
     })

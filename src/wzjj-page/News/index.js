@@ -11,16 +11,16 @@ class News extends React.Component {
   render() {
     return (
       <Router>
-        <main className="App">
+        <div className="App">
           <Route component={Sidebar} />
           <Switch>
 
             <Route exact path="/html/news-dianshang" component={DianshangNews} />
             <Route exact path="/html/news-videos" component={Videos} />
             <Redirect from="/html/hot_Consultant.html" to="/html/news-dianshang" />
-            <Route render={() => <div className="NoMatch" />} />
+            <Route render={() => <div className="NoMatch">待更新中...</div>} />
           </Switch>
-        </main>
+        </div>
       </Router>
     )
   }
