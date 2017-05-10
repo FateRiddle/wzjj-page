@@ -1,5 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 // const ExtractTextPlugin = require("extract-text-webpack-plugin")
 // const isProd = process.env.NODE_ENV === 'production'
 
@@ -73,14 +74,20 @@ module.exports = (env={}) => ({  // env={} so if not specified, env.production =
     //   })
     // ]
   },
-  devtool:"cheap-module-eval-source-map",//"cheap-module-eval-source-map",
+  devtool:env.production?"cheap-module-source-map":"cheap-module-eval-source-map",//"cheap-module-eval-source-map",
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
       sourceMap:!env.production,
-      compress:env.production,
+      compress:env.production?{ warnings: false }:false,
     }),
     new webpack.optimize.CommonsChunkPlugin("commons"),//output will be commons.chunk.js
     // new ExtractTextPlugin("style.css"),
+    // new BundleAnalyzerPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
   ],
   devServer: {
     contentBase: path.resolve(__dirname,"public"),

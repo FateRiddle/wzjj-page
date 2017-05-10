@@ -2,6 +2,7 @@
 
 .Alert__mask {
   position: fixed;
+  z-index: 10;
   top: 0;
   left: 0;
   height: 100vh;
@@ -13,7 +14,6 @@
 }
 
 .Alert {
-  z-index: 999;
   height: 20vh;
   width: 20vw;
   min-width: 250px;
