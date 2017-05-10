@@ -1,5 +1,4 @@
 import React from 'react'
-import $ from 'jquery'
 import { apply } from './api'
 import './css/alert.css'
 
@@ -9,11 +8,11 @@ class Alert extends React.Component {
 
   componentDidMount() {
 
-    $('#apply').click(()=>{
-      const name = $('#apply-name').val()
-      const city = $('#apply-city').val()
-      const phone = $('#apply-phone').val()
-      const area = $('#apply-area').val()
+    document.querySelector('#apply').addEventListener('click',()=>{
+      const name = document.querySelector('#apply-name').value
+      const city = document.querySelector('#apply-city').value
+      const phone = document.querySelector('#apply-phone').value
+      const area = document.querySelector('#apply-area').value
       const ok = this.basicVerify({ name,city,phone,area })
       if(ok){
         apply({ name,city,phone,area }).then(output => {
@@ -40,6 +39,7 @@ class Alert extends React.Component {
     let ok = true
     if(name === '' || city === '' || phone ==='' || area ===''){
       ok = false
+      console.log('haha');
       this.popMsg('请填写完整信息。')
     } else if(phone.length < 10 || isNaN(phone)) {
       ok = false
@@ -52,10 +52,10 @@ class Alert extends React.Component {
   }
 
   clearInfo = () => {
-    const name = $('#apply-name').val('')
-    const city = $('#apply-city').val('')
-    const phone = $('#apply-phone').val('')
-    const area = $('#apply-area').val('')
+    const name = document.querySelector('#apply-name').value('')
+    const city = document.querySelector('#apply-city').value('')
+    const phone = document.querySelector('#apply-phone').value('')
+    const area = document.querySelector('#apply-area').value('')
   }
 
 
