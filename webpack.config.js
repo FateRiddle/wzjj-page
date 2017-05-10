@@ -8,6 +8,8 @@ module.exports = (env={}) => ({  // env={} so if not specified, env.production =
   // context: __dirname + "/app",
   entry: {
     page_index: "./wzjj-page/index.js",
+    page_news_on_index: "./wzjj-page/NewsOnIndex/index.js",
+    page_form_on_index: "./wzjj-page/FormOnIndex/index.js",
     page_news: "./wzjj-page/News/index.js",
     houtai_index: "./wzjj-houtai/index.js",
   },
@@ -55,7 +57,7 @@ module.exports = (env={}) => ({  // env={} so if not specified, env.production =
           {
             loader: "file-loader",
             options: {
-              outputPath: "/assets/",  // 似乎是直接拼接上去的 两个"/"都要写 
+              outputPath: "/assets/",  // 似乎是直接拼接上去的 两个"/"都要写
               // publicPath: "assets/",   //what is this for? you don't need it in html
               name: '[name]--[hash:base64:5].[ext]'
             }
@@ -73,10 +75,10 @@ module.exports = (env={}) => ({  // env={} so if not specified, env.production =
   },
   devtool:"cheap-module-eval-source-map",//"cheap-module-eval-source-map",
   plugins: [
-    // new webpack.optimize.UglifyJsPlugin({
-    //   sourceMap:!env.production,
-    //   compress:env.production,
-    // }),
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap:!env.production,
+      compress:env.production,
+    }),
     new webpack.optimize.CommonsChunkPlugin("commons"),//output will be commons.chunk.js
     // new ExtractTextPlugin("style.css"),
   ],

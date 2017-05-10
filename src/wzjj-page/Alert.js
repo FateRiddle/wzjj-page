@@ -2,7 +2,6 @@ import React from 'react'
 import $ from 'jquery'
 import { apply } from './api'
 import './css/alert.css'
-// import checkUrl from './image/check.png'
 
 class Alert extends React.Component {
 
@@ -63,10 +62,12 @@ class Alert extends React.Component {
   render(){
     const { hidden,msg } = this.state
     return (!hidden &&
-      <div className="Alert">
-        <main>{msg}</main>
-        {/* <img src={checkUrl} alt=""/> */}
-        <div className="Alert__OkButton" onClick={this.close}></div>
+      <div className="Alert__mask">
+        <div className="Alert">
+          <header></header>
+          <main>{msg}</main>
+          <div className="Alert__OkButton" onClick={this.close}>确定</div>
+        </div>
       </div>
     )
   }

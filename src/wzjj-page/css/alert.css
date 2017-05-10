@@ -1,30 +1,59 @@
 /*报名提示*/
-.Alert {
+
+.Alert__mask {
   position: fixed;
-  z-index: 99999;
-  top: 30vh;
-  left: 40vw;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.Alert {
+  z-index: 999;
   height: 20vh;
-  width: 17vw;
+  width: 20vw;
   min-width: 250px;
-  background: black;
+  background: rgba(0, 0, 0, 0.7);
   color: #ffc519;
   font-size: 1.1rem;
-  opacity: 0.7;
   display: flex;
   flex-direction: column;
-  padding-top: 5vh;
+  justify-content: space-between;
   align-items: center;
+  padding-bottom: 2vh;
+  border-radius: 10px;
+}
+
+.Alert header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #ffc519;
+  height: 3.5vh;
+  min-height: 8px;
+  width: 100%;
 }
 
 .Alert main {
-  padding-bottom: 4vh;
+
 }
 
 .Alert__OkButton {
-  height: 14vh;
-  width: 10vw;
-  min-width: 100px;
-  max-width: 150px;
-  background: url('../image/check.png') no-repeat;
+  height: 3vh;
+  width: 8vw;
+  font-size: 1rem;
+  min-width: 10px;
+  max-width: 140px;
+  background: #ffc519;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Alert__OkButton:hover {
+  color: white;
 }

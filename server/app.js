@@ -2,7 +2,7 @@ const express = require('express')
 // const cors = require('cors')
 const bodyParser = require('body-parser')
 const path = require('path')
-const routes = require('./routes')
+// const routes = require('./routes')
 
 const app = express()
 
@@ -12,6 +12,8 @@ app.use(bodyParser.json())
 
 app.use(express.static(path.resolve(__dirname,'..','public')))
 
+
+//config for react-router
 app.get('/houtai/:anything',(req,res) => {
   res.sendFile(path.resolve(__dirname,'..','public','houtai','index.html'))
 })
@@ -23,9 +25,16 @@ app.get('/html/:newsPath',(req,res) => {
   }
 })
 
+//get database
 const mssql = require('./db')
 const { db,sql } = mssql
 
+app.get('/',(req,res) => {
+  res.sendFile(path.resolve(__dirname,'..','public','html','index.html'))
+})
+
+
+//routes
 app.post('/api/members', (req,res) => {
   console.log(req.body)
   const { name,phone,city,area } = req.body
@@ -52,21 +61,7 @@ app.post('/api/members', (req,res) => {
     console.log(result)
     res.json(result)
   })
-  // res.json({ok:true,msg:'haha'})
 })
-
-app.get('/',(req,res) => {
-  res.sendFile(path.resolve(__dirname,'..','public','html','index.html'))
-})
-
-// Serve static assets
-// app.use(
-//   express.static(path.resolve(__dirname, '..', 'build'))
-// )
-//
-// app.get('*', (req, res) => {
-//   res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
-// })
 
 app.get('/api/news', (req, res) => {
   db.then(() => {
@@ -77,8 +72,6 @@ app.get('/api/news', (req, res) => {
   })
   .catch(err => {console.error('sql error:',err)})
 })
-
-
 
 app.post('/api/news', (req, res) => {
   const { id,date,title,url,content } = req.body
@@ -126,8 +119,6 @@ app.delete('/api/news/:id',(req,res) => {
   .catch(err => {console.error('sql error:',err)})
 })
 
-
-
 app.get('/api/members', (req, res) => {
   db.then(() => {
     return sql.query`select * from tb_wzjj_signup order by createdAt desc`
@@ -173,7 +164,6 @@ app.post('/api/members/:id',(req,res) => {
     })
     .catch(err => {console.error('sql error:',err)})
   }
-
 })
 
 module.exports = app
